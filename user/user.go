@@ -38,7 +38,7 @@ func InitialMigration() {
 
 func GetUsers(c *fiber.Ctx) error {
 	var users []User
-	db.First(&users)
+	db.Find(&users)
 	return c.JSON(&users)
 }
 
